@@ -1,4 +1,3 @@
-
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
@@ -15,6 +14,12 @@ const router = new VueRouter({
       component: () => import('../views/Home.vue')
     },
     {
+      path: '/register',
+      name: 'register',
+      meta: { layout: 'empty' },
+      component: () => import('../views/Register.vue')
+    },
+    {
       path: '/login',
       name: 'login',
       meta: { layout: 'empty' },
@@ -25,12 +30,6 @@ const router = new VueRouter({
       name: 'categories',
       meta: { layout: 'main' },
       component: () => import('../views/Categories.vue')
-    },
-    {
-      path: '/register',
-      name: 'register',
-      meta: { layout: 'empty' },
-      component: () => import('../views/Register.vue')
     },
     {
       path: '/record',
